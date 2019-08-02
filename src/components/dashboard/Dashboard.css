@@ -1,0 +1,47 @@
+
+.create{
+    position: relative;
+    left: 350px;
+    top: 10px;
+    
+}
+
+.par{
+
+    flex:1;
+    order:2;
+}
+.sidebar-one{
+
+flex:1;
+order:1;
+}
+.sidebar-two{
+
+    flex:1;
+    order:3;
+}
+.chart{
+    display:flex;
+
+}
+.column-layout{
+    display:flex;
+}
+.main-column{
+    flex:1;
+    order:2;
+}
+.part1{
+    flex:1;
+    order:1;
+    background-color:lightblue;
+}
+.part2{
+    flex:1;
+    order:3;
+    background-color: burlywood;
+}
+
+
+

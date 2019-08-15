@@ -1,46 +1,58 @@
 
-.create{
-    position: relative;
-    left: 350px;
-    top: 10px;
-    
-}
+
 
 .par{
 
     flex:1;
-    order:2;
-}
+    order:1;
+    
+} 
 .sidebar-one{
 
-flex:1;
-order:1;
+flex:2;
+order:2;
 }
 .sidebar-two{
 
-    flex:1;
-    order:3;
+    flex:2;
+    order:2;
 }
 .chart{
     display:flex;
+    
 
 }
 .column-layout{
     display:flex;
+ 
 }
 .main-column{
-    flex:1;
+    flex:2;
     order:2;
 }
-.part1{
+ .part1{
     flex:1;
     order:1;
-    background-color:lightblue;
-}
+    background-color:white;
+} 
 .part2{
     flex:1;
     order:3;
-    background-color: burlywood;
+    background-color:white;
+}
+.load{
+    color:blue ;
+}
+.footer{
+    position: relative;
+    background-color:rgb(14, 143, 212);
+    color: white;
+
+}
+.project{
+   
+    color:rgb(14,143,212);
+
 }
 
 

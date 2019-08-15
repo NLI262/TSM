@@ -1,44 +1,48 @@
 import React from 'react';
 import {Button,ButtonToolbar,Navbar} from 'react-bootstrap';
 import Display from './Display.js';
-
+import Toolbar from './Toolbar.js';
+import Sidedrawer from './Sidedrawer.js'
 import Chart from './Chart.js';
 import './Dashboard.css'
+
 export default class Dashboard extends React.Component{
 state={
+sideDrawerOpen: true
+};
 
-addModalShow: false,
-      } 
+drawOpenClickHandler =()=>{
+this.setState((prevState)=> {
+  return{ sideDrawerOpen:!prevState.sideDrawerOpen  };
+
+}
+);
+
+};
+
 render()
  {
-     let addModalClose= ()=> this.setState({addModalShow:false});
+  let sideDrawerOpen;
+  if(this.state.sideDrawerOpen){
+    sideDrawerOpen=<Sidedrawer/>
+  }
+  
     return(
 
-  <div >
-<Navbar  >
-   &nbsp; &nbsp;  <Navbar.Brand href="#home">Welcome To Test Suite Management</Navbar.Brand>
-       <Navbar.Toggle />
-         <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              <a href="#login">Help</a> 
-            </Navbar.Text>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Navbar.Text>
-              <a href="#login">UserName</a>
-            </Navbar.Text>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Navbar.Text>
-              <a href="https://www.nineleaps.com/">Logout</a>
-            </Navbar.Text>
-         </Navbar.Collapse>
-    </Navbar>    
-
+  <div style={{width:'100%'}} >
+    
+<Toolbar drawerClickHandler ={this.drawOpenClickHandler}/>
+<Sidedrawer show ={sideDrawerOpen}/>
+<main style ={{marginTop:"64px"}}>
     <Chart/>
     
-    <Display/>
+  <Display/>
+  <br></br>
+  <footer className="footer"> Privacy & policy</footer>
 
+</main>
 
-
+ 
 </div>
 
   );

@@ -1,6 +1,8 @@
 import  React from 'react';
 import './Sidedrawer.css'
 const Sidedrawer = props => {
+
+  
      let drawerClasses = 'side-drawer';
      if (props.show) {
        drawerClasses = 'side-drawer open';
@@ -12,12 +14,12 @@ const Sidedrawer = props => {
         <ul  type="none">
             <li>
             
-      <a href="/"  >Dashboard Overview</a> 
-        <i class="fas fa-tachometer-alt fa-1x"></i>
+      <a href="/">Dashboard Overview</a> 
+       &nbsp; <i class="fas fa-tachometer-alt fa-1x"></i>
             </li>
             <br></br>
             <li>
-              Customizations <i class="fa fa-gear fa-spin fa-1x" ></i>
+              <a href="/pp">Customizations</a> <i class="fa fa-gear fa-spin fa-1x" ></i>
             </li>
             
         </ul>

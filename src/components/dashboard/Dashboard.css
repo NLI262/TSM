@@ -3,14 +3,14 @@
 
 .par{
 
-    flex:1;
+    flex:2;
     order:1;
     
 } 
 .sidebar-one{
 
-flex:2;
-order:2;
+flex:1;
+order:3;
 }
 .sidebar-two{
 
@@ -35,23 +35,25 @@ order:2;
     order:1;
     background-color:white;
 } 
-.part2{
+  /* .part2{
     flex:1;
     order:3;
-    background-color:white;
-}
-.load{
+    background-color:white; 
+} */
+.load{ 
     color:blue ;
 }
 .footer{
     position: relative;
-    background-color:rgb(14, 143, 212);
-    color: white;
+   
+    color:blue;
 
 }
 .project{
    
     color:rgb(14,143,212);
+     background-color: lightblue;
+    
 
 }
 

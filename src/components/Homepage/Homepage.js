@@ -12,7 +12,7 @@ firebase.initializeApp({
   authDomain: "test-suite-management.firebaseapp.com"
 })
 
-class Homepage extends Component {
+class HomePage extends Component {
 
   state = { isSignedIn: false }
   uiConfig = {
@@ -44,7 +44,7 @@ class Homepage extends Component {
           //console.log("Hello");
 
       if(user){
-        //window.location = "/dash"
+        window.location = "/dash"
     }
   
     })
@@ -66,9 +66,6 @@ return (
 
 <article class="main">
 <br/>
-<br/>
-<br/>
-<br/>
 <img src="https://www.nineleaps.com/wp-content/themes/nineleaps/assets/img/nineleaps-logo.svg" height="60px"></img>
 <br></br>
 <br></br>
@@ -78,18 +75,11 @@ return (
 <br></br>
 <br></br>
 
-{this.state.isSignedIn ? (
-          <span>
-            <div>Signed In!</div>
-            <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
-            <h1>Welcome {firebase.auth().currentUser.displayName}</h1></span>
-) : (
+
   <StyledFirebaseAuth
   uiConfig={this.uiConfig}
-  firebaseAuth={firebase.auth()}
-/>
-)
-}
+  firebaseAuth={firebase.auth()}/>
+
     {/*    <GoogleLogin
             clientId="567723174552-jgcp3opo8fdvfq80d4jpfad3mfls7q01.apps.googleusercontent.com"
             buttonText="Login with Google"
@@ -112,33 +102,8 @@ return (
 <br />
 <font color="white" size="5">Test Suite Management</font>
 
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-
 </aside>
 
-
-<aside class="aside aside-2"></aside>
 </div>
 
 
@@ -147,4 +112,4 @@ return (
 }
 }
 
-export default Homepage;
+export default HomePage;

@@ -30,16 +30,14 @@
     }
     
 .aside-1 {
+    top: 10px;
     background: #2980B9;
     text-align: center;
-    }
-    
-.aside-2 {
-    background: white;
+    height: 605px;
     }
     
     @media all and (min-width: 600px) {
-.aside { flex: 1.5 0 0; }
+.aside { flex: 1 0 0; }
     }
     
     @media all and (min-width: 800px) {
